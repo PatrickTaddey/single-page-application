@@ -1,0 +1,6 @@
+/app/dev/vendor/*
+/node_modules/*
+/app/build/*
+/app/release/*
+.sass-cache/*
+/app/dev/templates/templates.js
