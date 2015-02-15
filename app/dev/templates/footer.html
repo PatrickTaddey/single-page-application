@@ -1,0 +1,28 @@
+<footer>
+	<div class="row">
+		<div class="small-12 medium-6 columns">
+			<a class="github" href="https://github.com/PatrickTaddey/single-page-application" target="_blank"><i class="fa fa-github-alt icon"></i> {{ i18n.gettext("fork me on github") }}</a>
+		</div>
+		<div class="medium-6 columns">
+			<ul class="inline-list right hide-for-small social">
+				{% for icon, link in profile.get("social") %}
+				<li>
+					<a class="item" href="{{ link }}" target="_blank">
+						<i class="fa fa-{{ icon }} icon"></i>
+					</a>
+				</li>
+				{% endfor %}				
+			</ul>
+		</div>
+	</div>
+</footer>
+<div class="footer-bottom">
+	<div class="row">
+		<div class="small-6 columns">
+			{{ i18n.gettext("© copyright") }} 
+		</div>
+		<div class="small-6 columns text-right">
+			<a href="./#legal_notice">{{ i18n.gettext("legal notice") }}</a>
+		</div>
+	</div>
+</div>

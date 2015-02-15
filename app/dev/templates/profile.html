@@ -1,0 +1,21 @@
+{% extends "app/dev/templates/base.html" %}
+{% block content %}
+	<div class="row">
+		<div class="small-12 columns">
+			<h4 class="title"><span>{{ i18n.gettext("Profile") }}</span></h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 medium-8 columns">
+			{{ profile.get("description")}} 
+		</div>
+		<div class="hide-for-small medium-4 columns">
+			<img class="th" src="http://placehold.it/200x180" />
+		</div>
+	</div>
+	<div class="row show-for-small-only top-margin-15">
+		<div class="small-12 columns">
+			<img class="th" src="http://placehold.it/200x180" />
+		</div>
+	</div>
+{% endblock %}

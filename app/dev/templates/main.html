@@ -1,0 +1,13 @@
+{% extends "app/dev/templates/base.html" %}
+{% block content %}
+	<div class="row">
+		<div class="large-7 columns">
+			<h4 class="title"><span>{{ i18n.gettext("Welcome") }}</span></h4>
+			{{ profile.get("Welcome") }}
+		</div>
+		<div class="large-5 columns">
+			<h4 class="title"><span>{{ i18n.gettext("Short News") }}</span></h4>
+			{{ profile.get("Short News") }}
+		</div>
+	</div>
+{% endblock %}

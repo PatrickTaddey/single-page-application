@@ -1,0 +1,45 @@
+<section class="header-top">
+	<div class="row">
+		<div class="small-12 columns">
+			<ul class="inline-list right">
+				{% for icon, link in profile.get("social") %}
+				<li>
+					<a class="item" href="{{ link }}" target="_blank">
+						<i class="fa fa-{{ icon }} icon"></i>
+					</a>
+				</li>
+				{% endfor %}				
+			</ul>
+		</div>
+	</div>
+</section>
+<div class="contain-to-grid sticky">
+	<nav class="top-bar" data-topbar="" role="navigation" data-options="sticky_on: large">
+		<ul class="title-area">
+			<li class="name">
+				<h1><a href="#">Your Logo</a></h1>
+			</li>
+			<li class="toggle-topbar menu-icon"><a href="#"><span>{{ i18n.gettext("menu") }}</span></a></li>
+		</ul>
+		
+		<section class="top-bar-section">
+			<ul class="right">
+				<li><a href="#">{{ i18n.gettext("home") }}</a></li>
+				<li class="has-dropdown">
+					<a href="#profile">{{ i18n.gettext("profile") }}</a>
+					<ul class="dropdown">
+						<li><a href="#skills">{{ i18n.gettext("skills") }}</a></li>
+						<li><a href="#credentials">{{ i18n.gettext("credentials") }}</a></li>
+					</ul>
+				</li>
+				<li class="has-dropdown">
+					<a href="#contact">{{ i18n.gettext("contact") }}</a>
+					<ul class="dropdown">
+						<li><a href="#legal_notice">{{ i18n.gettext("legal notice") }}</a></li>
+					</ul>
+				</li>
+			</ul>
+		</section>
+	</nav>
+</div>
+<div class="header-background"></div>

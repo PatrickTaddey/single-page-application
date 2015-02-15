@@ -1,0 +1,44 @@
+{% extends "app/dev/templates/base.html" %}
+{% block content %}
+	<div class="row">
+		<div class="small-12 medium-7 columns">
+			<h4 class="title"><span>{{ i18n.gettext("contact") }}</span></h4>
+			<form method="post" name="contact" id="js-contact-form" class="form">
+				<div class="row">
+					<div class="small-12 columns">
+						<label for="name">{{ i18n.gettext("name") }}
+							<input class="js-form-field" name="name" id="name" type="text">
+						</label>
+						<small class="error hide"></small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<label for="email">{{ i18n.gettext("email") }}
+							<input class="js-form-field" name="email" id="email" type="text">
+						</label>
+						<small class="error hide"></small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns">
+						<label for="message">{{ i18n.gettext("message") }}
+							<textarea rows="5" class="js-form-field" name="message" id="message"></textarea>
+						</label>
+						<small class="error hide"></small>
+					</div>
+				</div>
+				<div class="row">
+					<div class="small-12 columns text-right">
+						<input type="submit" class="submit button small radius" value="{{ i18n.gettext('send message') }}" />
+					</div>
+				</div>
+			</form>
+		</div>
+		<div class="hide-for-small medium-5 columns">
+			<h4 class="title"><span>{{ i18n.gettext("legal notice") }}</span></h4>
+			{% include "app/dev/templates/include_legal_notice.html" %}
+		</div>
+
+	</div>
+{% endblock %}

@@ -1,0 +1,42 @@
+{% extends "app/dev/templates/base.html" %}
+{% block content %}
+	<div class="row">
+		<div class="small-12 columns">
+			<h4 class="title"><span>{{ i18n.gettext("Skills") }}</span></h4>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			<dl class="sub-nav" role="menu" title="Filter Menu List">
+				<dt>{{ i18n.gettext("Filter:") }}</dt>
+				<dd role="menuitem" data-class=".js-skill" class="js-skill-filter active">
+				<a href="#">{{ i18n.gettext("All") }}</a>
+				</dd>
+				<dd role="menuitem" data-class=".frontend" class="js-skill-filter">
+				<a href="#">{{ i18n.gettext("Frontend") }}</a>
+				</dd>
+				<dd role="menuitem" data-class=".backend" class="js-skill-filter">
+				<a href="#">{{ i18n.gettext("Backend") }}</a>
+				</dd>
+				<dd role="menuitem" data-class=".tools" class="js-skill-filter">
+				<a href="#">{{ i18n.gettext("Tools") }}</a>
+				</dd>
+			</dl>
+		</div>
+	</div>
+	<div class="row">
+		<div class="small-12 columns">
+			{% for skill in skills %}
+				<span aria-expanded="false" aria-controls="drop-{{loop.index}}" data-dropdown="drop-{{loop.index}}" class="js-skill button small secondary radius {{skill.get("class")}}">
+					{{skill.get("name")}}
+				</span>
+				<div id="drop-{{loop.index}}" data-dropdown-content class="f-dropdown small content" aria-hidden="true" tabindex="-1">
+					<p>
+					{{skill.get("text")}}
+					</p>
+					<a href="{{skill.get("link")}}" class="button tiny radius right" target="_blank">{{ i18n.gettext("goto") }}</a>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+{% endblock %}
