@@ -1,7 +1,6 @@
 BaseModel = require("./base.coffee")
-
+$ = require("jquery")
 class ConfigModel extends BaseModel
 	defaults:
-		#api: "http://localhost:8080/api/"
-		api: "http://api.test.de/"
+		api: $("body").attr("data-api") or "//api.megaphones.de/"
 module.exports = new ConfigModel()
