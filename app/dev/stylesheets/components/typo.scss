@@ -1,7 +1,6 @@
 h1, h2, h3, h4, h5, h6 { 
 	color:$grey;
 	&.title {
-		padding-left:20px;
 		position: relative;
 		text-align: left;
 		text-transform:uppercase;
@@ -11,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	&.title span {
 		background: #fff;
-		padding: 0 15px;
+		padding: 0 15px 0px 0px;
 		position: relative;
 		z-index: 1;
 	}

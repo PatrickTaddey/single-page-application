@@ -1,4 +1,4 @@
-.content{
+.content-area {
 	position: relative;
 	background-color: $white;
 	margin-top:-40px;
@@ -19,17 +19,37 @@
 	.row {
 		font-size: rem-calc(14);
 	}
-	.submit.button {
-		background-color: $green;
-		color:$white;
-		&:hover {
-			background-color: darken($green, 5%);
-		}
-	}
 	.hide {
 		display: none;
 	}
 	label {
 		font-weight: bold;
+	}
+	.f-dropdown {
+		margin-top:10px;
+	}
+	.f-open-dropdown p {
+		font-size:rem-calc(14);
+	}
+	.js-skill.button {
+		background-color: #ddd;	
+		color:$grey;
+		font-weight:bold;
+		&:hover{
+			background-color: $green;
+			color:#fff;		
+		}
+	}
+	.js-skill-filter {
+		text-transform: capitalize;
+	}
+}
+
+.green-button {
+	background-color: $green;	
+	color:#fff;
+	&:hover, &.open{
+		color:#fff;
+		background-color: lighten($green, 5%);		
 	}
 }

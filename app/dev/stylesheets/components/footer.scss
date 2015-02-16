@@ -20,7 +20,7 @@ footer {
 		font-weight:bold;
 		color:$circle-background-color;
 		&:hover{
-			color:  lighten($circle-background-color, 10%);
+			color: lighten($circle-background-color, 10%);
 		}
 	}
 }

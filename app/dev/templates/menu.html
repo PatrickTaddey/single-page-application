@@ -17,7 +17,7 @@
 	<nav class="top-bar" data-topbar="" role="navigation" data-options="sticky_on: large">
 		<ul class="title-area">
 			<li class="name">
-				<h1><a href="#">Your Logo</a></h1>
+				<h1><a href="#" class="logo"><i class="fa fa-ils"></i> Your Logo</a></h1>
 			</li>
 			<li class="toggle-topbar menu-icon"><a href="#"><span>{{ i18n.gettext("menu") }}</span></a></li>
 		</ul>
@@ -28,6 +28,7 @@
 				<li class="has-dropdown">
 					<a href="#profile">{{ i18n.gettext("profile") }}</a>
 					<ul class="dropdown">
+						<li class="show-for-small-only"><a href="#profile">{{ i18n.gettext("profile") }}</a></li>
 						<li><a href="#skills">{{ i18n.gettext("skills") }}</a></li>
 						<li><a href="#credentials">{{ i18n.gettext("credentials") }}</a></li>
 					</ul>
@@ -35,6 +36,7 @@
 				<li class="has-dropdown">
 					<a href="#contact">{{ i18n.gettext("contact") }}</a>
 					<ul class="dropdown">
+						<li class="show-for-small-only"><a href="#contact">{{ i18n.gettext("contact") }}</a></li>
 						<li><a href="#legal_notice">{{ i18n.gettext("legal notice") }}</a></li>
 					</ul>
 				</li>

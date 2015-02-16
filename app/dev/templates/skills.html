@@ -7,34 +7,38 @@
 	</div>
 	<div class="row">
 		<div class="small-12 columns">
-			<dl class="sub-nav" role="menu" title="Filter Menu List">
+			<!-- SHOW ONLY FOR MEDIUM UP -->
+			<dl class="sub-nav show-for-medium-up" role="menu" title="Filter Menu List">
 				<dt>{{ i18n.gettext("Filter:") }}</dt>
 				<dd role="menuitem" data-class=".js-skill" class="js-skill-filter active">
-				<a href="#">{{ i18n.gettext("All") }}</a>
+					<a href="#">{{ i18n.gettext("All") }}</a>
 				</dd>
-				<dd role="menuitem" data-class=".frontend" class="js-skill-filter">
-				<a href="#">{{ i18n.gettext("Frontend") }}</a>
-				</dd>
-				<dd role="menuitem" data-class=".backend" class="js-skill-filter">
-				<a href="#">{{ i18n.gettext("Backend") }}</a>
-				</dd>
-				<dd role="menuitem" data-class=".tools" class="js-skill-filter">
-				<a href="#">{{ i18n.gettext("Tools") }}</a>
-				</dd>
+				{% for skill_type in skill_types %}
+					<dd role="menuitem" data-class=".{{skill_type}}" class="js-skill-filter">
+						<a href="#">{{ i18n.gettext(skill_type) }}</a>
+					</dd>
+				{% endfor %}
 			</dl>
+			<!-- SHOW FOR SMALL ONLY -->
+			<button id="js-skill-choice" data-dropdown="drop" aria-controls="drop" aria-expanded="false" class="show-for-small-only small radius button dropdown green-button">{{ i18n.gettext("All") }}</button>
+
+			<ul id="drop" class="f-dropdown" data-dropdown-content>
+				<li><a data-name="all" data-class=".js-skill" class="js-skill-filter skiller">{{ i18n.gettext("All") }}</a></li>
+				{% for skill_type in skill_types %}
+					<li><a data-name="{{skill_type}}" data-class=".{{skill_type}}" class="js-skill-filter skiller">{{ i18n.gettext(skill_type) }}</a></li>
+				{% endfor %}
+			</ul>
 		</div>
 	</div>
 	<div class="row">
 		<div class="small-12 columns">
 			{% for skill in skills %}
 				<span aria-expanded="false" aria-controls="drop-{{loop.index}}" data-dropdown="drop-{{loop.index}}" class="js-skill button small secondary radius {{skill.get("class")}}">
-					{{skill.get("name")}}
+				{{skill.get("name")}}
 				</span>
 				<div id="drop-{{loop.index}}" data-dropdown-content class="f-dropdown small content" aria-hidden="true" tabindex="-1">
-					<p>
 					{{skill.get("text")}}
-					</p>
-					<a href="{{skill.get("link")}}" class="button tiny radius right" target="_blank">{{ i18n.gettext("goto") }}</a>
+					<a href="{{skill.get("link")}}" class="button green-button tiny radius right" target="_blank">{{ i18n.gettext("goto") }}</a>
 				</div>
 			{% endfor %}
 		</div>

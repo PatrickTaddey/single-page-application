@@ -6,5 +6,6 @@ class ContentView extends BaseView
 	template: "app/dev/templates/main.html"
 	show: () ->
 		$(@regions.content).html(@render(@template, profile: ProfileModel))
+		@position_footer()
 
 module.exports = new ContentView()

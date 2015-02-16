@@ -5,7 +5,6 @@ class MenuView extends BaseView
 	template: "app/dev/templates/menu.html"
 	events:
 		"click a" : (event) -> 
-			console.log "asd"
 			$("li", @$el).removeClass("active")
 			$(event.currentTarget).closest("li").addClass("active")
 			if($(event.currentTarget).closest("ul").hasClass("dropdown"))

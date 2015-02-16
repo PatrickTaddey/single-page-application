@@ -31,6 +31,7 @@ class ContactView extends BaseView
 
 	show: () ->
 		$(@$el).html(@render(@template, profile: ProfileModel))
+		@position_footer()
 
 	onValidField: (attrName, attrValue, model) ->
 		element = $('[name=' + attrName + ']')
