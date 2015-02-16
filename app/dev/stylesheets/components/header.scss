@@ -20,10 +20,10 @@
 }
 
 .header-background {
-	background-image: url("http://placehold.it/1600x150&text=Header");
+	background-image: url("../images/bg.jpg");
 	background-repeat: no-repeat;
-	background-position: top center;
-	height: 150px;
+	background-position: center center;
+	height: 300px;
 	background-size:cover;
 	position: relative;
 }
@@ -33,10 +33,7 @@
 }
 
 a.logo {
-	span {
-		color:lighten($grey, 50%) !important;
-	}
 	&:hover {
-		color:darken($grey, 10%) !important;
+		color:darken($grey, 20%) !important;
 	}
 }
