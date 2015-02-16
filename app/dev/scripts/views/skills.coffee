@@ -5,6 +5,13 @@ SkillsCollection = require("../collections/skills.coffee")
 class SkillsView extends BaseView
 	template: "app/dev/templates/skills.html"
 	events:
+		"click .js-skill" : (event) =>
+			description = $(event.currentTarget).attr("data-description")
+			link = $(event.currentTarget).attr("data-link")
+			target = "#" + $(event.currentTarget).attr("data-dropdown")
+			$(target + " span").text(description)
+			$(target + " a").attr("href", link)
+			
 		"click .js-skill-filter" : (event) =>
 			event.preventDefault()
 			if $(event.currentTarget).hasClass("skiller")

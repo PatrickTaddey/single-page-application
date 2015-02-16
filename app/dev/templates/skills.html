@@ -30,17 +30,17 @@
 			</ul>
 		</div>
 	</div>
-	<div class="row">
+	<div class="row top-margin-10">
 		<div class="small-12 columns">
 			{% for skill in skills %}
-				<span aria-expanded="false" aria-controls="drop-{{loop.index}}" data-dropdown="drop-{{loop.index}}" class="js-skill button small secondary radius {{skill.get("class")}}">
+				<span data-link="{{skill.get("link")}}" data-description="{{skill.get("text")}}" aria-expanded="false" aria-controls="drop-one" data-dropdown="drop-one" class="js-skill button small secondary radius {{skill.get("class")}}">
 				{{skill.get("name")}}
 				</span>
-				<div id="drop-{{loop.index}}" data-dropdown-content class="f-dropdown small content" aria-hidden="true" tabindex="-1">
-					{{skill.get("text")}}
-					<a href="{{skill.get("link")}}" class="button green-button tiny radius right" target="_blank">{{ i18n.gettext("goto") }}</a>
-				</div>
 			{% endfor %}
+			<div id="drop-one" data-dropdown-content class="f-dropdown small content" aria-hidden="true" tabindex="-1">
+				<span></span><br>
+				<a href="" class="button green-button tiny radius right" target="_blank">{{ i18n.gettext("goto") }}</a>
+			</div>
 		</div>
 	</div>
 {% endblock %}
