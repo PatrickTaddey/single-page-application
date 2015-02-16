@@ -25,6 +25,11 @@ module.exports = (grunt) ->
 					sourcemap: true
 				files:
 					"app/build/stylesheets/app.css": "app/dev/stylesheets/app.scss"
+			release:
+				options:
+					outputStyle: "compressed"
+				files:
+					"app/release/stylesheets/app.min.css": "app/dev/stylesheets/app.scss"
 
 		concat:
 			build:
@@ -38,24 +43,30 @@ module.exports = (grunt) ->
 					port: 9000
 					base: "app/build"
 
-		clean: ["app/build"]
+		clean: ["app/build", "app/release"]
 
 		injector:
 			options:
 				addRootSlash: false
-				template: "app/dev/templates/index.html"
 			build:
 				options:
 					ignorePath: "app/build/"
+					template: "app/dev/templates/index_build.html"
 				files:
 					"app/build/index.html": ["app/build/scripts/vendor.js", "app/build/scripts/app.js", "app/build/stylesheets/app.css"]
+			release:
+				options:
+					ignorePath: "app/release/"
+					template: "app/dev/templates/index_release.html"
+				files:
+					"app/release/index.html": ["app/release/scripts/app.min.js", "app/release/stylesheets/app.min.css"]
 
 		asset_cachebuster:
 			options:
 				buster: Date.now()
-			build:
+			release:
 				files:
-					"app/build/index.html":["app/build/index.html"]
+					"app/release/index.html":["app/release/index.html"]
 
 		copy:
 			build:
@@ -63,10 +74,15 @@ module.exports = (grunt) ->
 					{expand: true, cwd: "app/dev/vendor/components-font-awesome/fonts/", src: ["**"], dest: "app/build/fonts"}
 					{expand: true, cwd: "app/dev/images/", src: ["**"], dest: "app/build/images"}
 				]
+			release:
+				files: [
+					{expand: true, cwd: "app/dev/vendor/components-font-awesome/fonts/", src: ["**"], dest: "app/release/fonts"}
+					{expand: true, cwd: "app/dev/images/", src: ["**"], dest: "app/release/images"}
+				]
 
 		uglify:
 			release:
-				files: 'app/release/scripts/app.min.js': ['app/build/scripts/vendor.js', 'app/build/scripts/app.js']
+				files: 'app/release/scripts/app.min.js': ['app/build/scripts/app.js']
 
 		cssmin:
 			release:
@@ -136,4 +152,19 @@ module.exports = (grunt) ->
 			"copy:build",
 			"connect:build",
 			"focus:build"
+		]
+		
+		grunt.registerTask "release", [
+			"clean",
+			"nunjucks"
+			"browserify:app",
+			"sass:release",
+			"uglify:release",
+			"copy:release",
+			"injector:release",
+			"asset_cachebuster"
+		]
+		grunt.registerTask "locale", [
+			"shell",
+			"po2json"
 		]
