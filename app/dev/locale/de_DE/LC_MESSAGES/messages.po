@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 13:40+0100\n"
+"POT-Creation-Date: 2015-02-17 13:45+0100\n"
 "PO-Revision-Date: 2014-11-27 15:13+0200\n"
 "Last-Translator: Patrick Taddey <tooltonix@gmail.com>\n"
 "Language-Team: German \n"
@@ -80,8 +80,7 @@ msgid "\"placeholder message\""
 msgstr "\"Deine Nachricht an mich...\""
 
 #: app/dev/templates/contact.html:47
-#, fuzzy
-msgid "'send message'"
+msgid "\"send message\""
 msgstr "Abschicken"
 
 #: app/dev/templates/skills.html:5
@@ -119,11 +118,11 @@ msgstr "Skills"
 
 #: app/dev/scripts/views/contact.coffee:23
 msgid "Mail sent"
-msgstr "<strong>Danke!</strong> Deine E-Mail wurde verschickt."
+msgstr "Danke! Deine E-Mail wurde verschickt."
 
 #: app/dev/scripts/views/contact.coffee:25
 msgid "Mail not sent"
-msgstr "<strong>Fehler</strong>. Deine E-Mail konnte nicht verschickt werden."
+msgstr "Fehler. Deine E-Mail konnte nicht verschickt werden."
 
 #: app/dev/scripts/models/contact.coffee:15
 msgid "Please enter your name"
