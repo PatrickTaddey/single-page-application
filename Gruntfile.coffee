@@ -43,7 +43,11 @@ module.exports = (grunt) ->
 					port: 9000
 					base: "app/build"
 
-		clean: ["app/build", "app/release"]
+		clean: 
+			build:
+				["app/build"]
+			release:
+				["app/release"]
 
 		injector:
 			options:
@@ -143,7 +147,7 @@ module.exports = (grunt) ->
 		require('load-grunt-tasks')(grunt)
 
 		grunt.registerTask "default", [
-			"clean",
+			"clean:build",
 			"nunjucks"
 			"browserify:app",
 			"sass:build",
