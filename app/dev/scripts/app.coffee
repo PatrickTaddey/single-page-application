@@ -16,7 +16,7 @@ class AppRouter extends Backbone.Router
 		"profile" : "profile"
 		"skills" : "skills"
 		"experiences" : "experiences"
-		"contact" : "contact"
+		"contact(/:buy)" : "contact"
 		"legal_notice" : "legal_notice"
 	initialize: () ->
 		ProfileModel.fetch
@@ -30,8 +30,8 @@ class AppRouter extends Backbone.Router
 		ProfileView.show()
 	skills: () ->
 		SkillsView.show()
-	contact: () ->
-		ContactView.show()
+	contact: (buy) ->
+		ContactView.show(buy)
 	legal_notice: () ->
 		LegalNoticeView.show()
 		

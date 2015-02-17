@@ -5,7 +5,7 @@ i18n = require("../utils/i18n.coffee")
 class ContactModel extends BaseModel
 	urlRoot: () ->
 		ConfigModel.get("api") + "contacts"
-	
+
 	validation:
 		name:
 			required: true
@@ -17,6 +17,9 @@ class ContactModel extends BaseModel
 			required: true
 			format: "email"	
 			message: i18n.gettext("Please enter your email")
+		offer:
+			format: "number"	
+			message: i18n.gettext("Please enter a valid offer")
 		message:
 			required: true
 			minLength: 3
