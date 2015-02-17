@@ -98,4 +98,22 @@
 			}
 		}
 	}
+	.alert-box {
+		&.success {
+			background-color: $green !important;
+			color:$white !important;
+			border-color:darken($green, 10%) !important;
+			i {
+				color:$white;
+			}
+		}
+		&.warning {
+			background-color: $grey !important;
+			color:$white !important;
+			border-color:darken($grey, 10%) !important;
+			i {
+				color:$white;
+			}
+		}
+	}
 }
