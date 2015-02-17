@@ -43,6 +43,23 @@
 	.js-skill-filter {
 		text-transform: capitalize;
 	}
+	.teaser p {
+		font-size: rem-calc(13px);
+	}
+	.circle {
+		@include circle(95px,$light-grey);
+		font-size: rem-calc(28px);
+		width: 95px;
+		height: 95px;
+		line-height: 95px;
+		display: inline-block;
+		color:$grey;
+		font-weight:normal;
+		&:hover{
+			color: $white;
+			background-color: $green;
+		}
+	}
 }
 
 .green-button {
