@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-16 14:03+0100\n"
+"POT-Creation-Date: 2015-02-17 07:21+0100\n"
 "PO-Revision-Date: 2014-11-27 15:13+0200\n"
 "Last-Translator: Patrick Taddey <tooltonix@gmail.com>\n"
 "Language-Team: German \n"
@@ -25,10 +25,6 @@ msgstr "Profil"
 #: app/dev/templates/footer.html:4
 msgid "fork me on github"
 msgstr "fork me on github"
-
-#: app/dev/templates/footer.html:22
-msgid "© copyright"
-msgstr "© copyright"
 
 #: app/dev/templates/footer.html:25 app/dev/templates/contact.html:39
 #: app/dev/templates/menu.html:40 app/dev/templates/legal_notice.html:5
@@ -90,12 +86,44 @@ msgid "credentials"
 msgstr "Referenzen"
 
 #: app/dev/templates/main.html:5
-msgid "Welcome"
-msgstr "Welcome"
+msgid "Hi, I'm Patrick Taddey"
+msgstr ""
 
-#: app/dev/templates/main.html:9
-msgid "Short News"
-msgstr "News"
+#: app/dev/templates/main.html:19
+msgid "And I-develop JS-WebApps"
+msgstr ""
+
+#: app/dev/templates/main.html:25
+msgid "performant"
+msgstr ""
+
+#: app/dev/templates/main.html:27
+msgid "text performant"
+msgstr ""
+
+#: app/dev/templates/main.html:32
+msgid "fast"
+msgstr ""
+
+#: app/dev/templates/main.html:34
+msgid "text fast"
+msgstr ""
+
+#: app/dev/templates/main.html:39
+msgid "responsive"
+msgstr ""
+
+#: app/dev/templates/main.html:41
+msgid "text responsive"
+msgstr ""
+
+#: app/dev/templates/main.html:46
+msgid "extendable"
+msgstr ""
+
+#: app/dev/templates/main.html:48
+msgid "text extendable"
+msgstr ""
 
 #: app/dev/scripts/views/contact.coffee:19
 msgid "Mail sent"
@@ -116,3 +144,12 @@ msgstr "Bitte eine valide E-Mail eingeben"
 #: app/dev/scripts/models/contact.coffee:24
 msgid "Please enter a message"
 msgstr "Bitte eine Nachricht eingeben"
+
+#~ msgid "© copyright"
+#~ msgstr "© copyright"
+
+#~ msgid "Welcome"
+#~ msgstr "Welcome"
+
+#~ msgid "Short News"
+#~ msgstr "News"
