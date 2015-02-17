@@ -37,7 +37,7 @@
 		font-weight:bold;
 		&:hover{
 			background-color: $green;
-			color:#fff;		
+			color:$white;		
 		}
 	}
 	.js-skill-filter {
@@ -60,13 +60,42 @@
 			background-color: $green;
 		}
 	}
+	.pricing-table {
+		border-color:$green;
+		.price {
+			background-color: $green;
+			color:$white;
+		}
+		.description {
+			text-align: left;
+			color:$grey;
+			font-size: rem-calc(13px);
+		}
+		.bullet-item {
+			color:$grey;
+			font-size: rem-calc(13px);
+			font-weight: bold;
+		}
+		.label {
+			background-color: $green;
+			color:$white;
+		}
+		.button {
+			background-color: $green;	
+			color:$white;
+			&:hover{
+				background-color: lighten($green,5%);
+				color:$white;		
+			}
+		}
+	}
 }
 
 .green-button {
 	background-color: $green;	
-	color:#fff;
+	color:$white;
 	&:hover, &.open{
-		color:#fff;
+		color:$white;
 		background-color: lighten($green, 5%);		
 	}
 }

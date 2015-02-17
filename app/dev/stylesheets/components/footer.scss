@@ -16,8 +16,7 @@ footer {
 			background-color: lighten($circle-background-color, 10%);
 		}
 	}
-	.github {
-		font-weight:bold;
+	.inline-list li a {
 		color:$circle-background-color;
 		&:hover{
 			color: lighten($circle-background-color, 10%);

@@ -25,6 +25,7 @@ h1, h2, h3, h4, h5, h6 {
 		width: 100%;
 	}	
 	&.special {
+		font-size: rem-calc(14px);
 		margin-top:10px;
 		font-weight:bold;
 		text-transform:uppercase;

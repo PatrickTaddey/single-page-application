@@ -1,0 +1,7 @@
+{% for social in profile.get("social") %}
+	<li>
+		<a class="item" href="{{ social.link }}" target="_blank">
+			<i class="fa {{ social.icon }} icon"></i>
+		</a>
+	</li>
+{% endfor %}

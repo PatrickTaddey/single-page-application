@@ -2,51 +2,28 @@
 {% block content %}
 	<div class="row">
 		<div class="large-12 columns">
-			<h4 class="title"><span>{{ i18n.gettext("Hi, I'm Patrick Taddey") }}</span></h4>
+			<h4 class="title"><span>{{ profile.get("welcome").title }}</span></h4>
 		</div>
 	</div>
 	<div class="row">
-		<div class="small-12 medium-8 columns">
-			{{ profile.get("welcome") }}
-		</div>
-		<div class="hide-for-small medium-4 columns">
-			<img class="th" src="http://placehold.it/120x80" />
+		<div class="small-12 medium-10 large-8 columns">
+			{{ profile.get("welcome").text }}
 		</div>
 	</div>
-
 	<div class="row top-margin-20">
 		<div class="large-12 columns">
-			<h4 class="title"><span>{{ i18n.gettext("And I-develop JS-WebApps") }}</span></h4>
+			<h4 class="title"><span>{{ profile.get("features").title }}</span></h4>
 		</div>
 	</div>
 	<div class="row top-margin-20 teaser">
+	{% for feature in profile.get("features").items %}
 		<div class="medium-3 columns text-center">
-			<i class="fa fa-rocket circle"></i>
-			<h6 class="special"><span>{{ i18n.gettext("performant") }}</span></h6>
+			<i class="fa {{ feature.icon }} circle"></i>
+			<h6 class="special"><span>{{ feature.title }}</span></h6>
 			<p>
-				{{ i18n.gettext("text performant") }}
+				{{ feature.text }}
 			</p>
 		</div>
-		<div class="medium-3 columns text-center">
-			<i class="fa fa-line-chart circle"></i>
-			<h6 class="special"><span>{{ i18n.gettext("fast") }}</span></h6>
-			<p>
-				{{ i18n.gettext("text fast") }}
-			</p>
-		</div>
-		<div class="medium-3 columns text-center">
-			<i class="fa fa-mobile circle"></i>
-			<h6 class="special"><span>{{ i18n.gettext("responsive") }}</span></h6>
-			<p>
-				{{ i18n.gettext("text responsive") }}
-			</p>
-		</div>
-		<div class="medium-3 columns text-center">
-			<i class="fa fa-github circle"></i>
-			<h6 class="special"><span>{{ i18n.gettext("extendable") }}</span></h6>
-			<p>
-				{{ i18n.gettext("text extendable") }}
-			</p>
-		</div>
+	{% endfor %}
 	</div>
 {% endblock %}
