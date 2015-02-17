@@ -7,6 +7,7 @@ class Helper
 		buffer_height = window_height - wrapper_height + 39
 		if window_height > wrapper_height
 			$(".content-area").css("padding-bottom", buffer_height + "px")
+		$(window).scrollTop(0)
 	show_alert:(alert_class, alert_message)->
 		$(".alert-box").removeClass("hide")
 		.addClass(alert_class)
