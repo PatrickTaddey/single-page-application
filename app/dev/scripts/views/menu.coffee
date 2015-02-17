@@ -10,6 +10,7 @@ class MenuView extends BaseView
 			$(event.currentTarget).closest("li").addClass("active")
 			if($(event.currentTarget).closest("ul").hasClass("dropdown"))
 				$(event.currentTarget).closest("ul").closest("li.has-dropdown").addClass("active")
+			$("body").focus()
 	initialize: ->
 		@$el = $(@regions.menu)
 		hostname = window.location.hostname
