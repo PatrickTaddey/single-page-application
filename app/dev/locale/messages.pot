@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 11:28+0100\n"
+"POT-Creation-Date: 2015-02-17 13:40+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -38,11 +38,11 @@ msgid "buy this domain"
 msgstr ""
 
 #: app/dev/templates/footer.html:27 app/dev/templates/contact.html:53
-#: app/dev/templates/menu.html:34 app/dev/templates/legal_notice.html:5
+#: app/dev/templates/menu.html:33 app/dev/templates/legal_notice.html:5
 msgid "legal notice"
 msgstr ""
 
-#: app/dev/templates/contact.html:5 app/dev/templates/menu.html:31
+#: app/dev/templates/contact.html:5 app/dev/templates/menu.html:30
 msgid "contact"
 msgstr ""
 
@@ -70,12 +70,16 @@ msgstr ""
 msgid "\"placeholder offer\""
 msgstr ""
 
-#: app/dev/templates/contact.html:39 app/dev/templates/menu.html:33
+#: app/dev/templates/contact.html:39 app/dev/templates/menu.html:32
 msgid "message"
 msgstr ""
 
 #: app/dev/templates/contact.html:40
 msgid "\"placeholder message\""
+msgstr ""
+
+#: app/dev/templates/contact.html:47
+msgid "'send message'"
 msgstr ""
 
 #: app/dev/templates/skills.html:5
@@ -109,10 +113,6 @@ msgstr ""
 
 #: app/dev/templates/menu.html:26
 msgid "skills"
-msgstr ""
-
-#: app/dev/templates/menu.html:27
-msgid "credentials"
 msgstr ""
 
 #: app/dev/scripts/views/contact.coffee:23

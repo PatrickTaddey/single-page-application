@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 11:28+0100\n"
+"POT-Creation-Date: 2015-02-17 13:40+0100\n"
 "PO-Revision-Date: 2014-11-27 15:13+0200\n"
 "Last-Translator: Patrick Taddey <tooltonix@gmail.com>\n"
 "Language-Team: German \n"
@@ -39,11 +39,11 @@ msgid "buy this domain"
 msgstr "buy this domain"
 
 #: app/dev/templates/footer.html:27 app/dev/templates/contact.html:53
-#: app/dev/templates/menu.html:34 app/dev/templates/legal_notice.html:5
+#: app/dev/templates/menu.html:33 app/dev/templates/legal_notice.html:5
 msgid "legal notice"
 msgstr "Impressum"
 
-#: app/dev/templates/contact.html:5 app/dev/templates/menu.html:31
+#: app/dev/templates/contact.html:5 app/dev/templates/menu.html:30
 msgid "contact"
 msgstr "Kontakt"
 
@@ -71,13 +71,18 @@ msgstr "Angebot"
 msgid "\"placeholder offer\""
 msgstr "\"z.B. '100'\""
 
-#: app/dev/templates/contact.html:39 app/dev/templates/menu.html:33
+#: app/dev/templates/contact.html:39 app/dev/templates/menu.html:32
 msgid "message"
 msgstr "Nachricht"
 
 #: app/dev/templates/contact.html:40
 msgid "\"placeholder message\""
 msgstr "\"Deine Nachricht an mich...\""
+
+#: app/dev/templates/contact.html:47
+#, fuzzy
+msgid "'send message'"
+msgstr "Abschicken"
 
 #: app/dev/templates/skills.html:5
 msgid "Skills"
@@ -112,17 +117,13 @@ msgstr "Über mich"
 msgid "skills"
 msgstr "Skills"
 
-#: app/dev/templates/menu.html:27
-msgid "credentials"
-msgstr "Referenzen"
-
 #: app/dev/scripts/views/contact.coffee:23
 msgid "Mail sent"
-msgstr "Danke! Deine E-Mail wurde verschickt."
+msgstr "<strong>Danke!</strong> Deine E-Mail wurde verschickt."
 
 #: app/dev/scripts/views/contact.coffee:25
 msgid "Mail not sent"
-msgstr "Fehler. Deine E-Mail konnte nicht verschickt werden."
+msgstr "<strong>Fehler</strong>. Deine E-Mail konnte nicht verschickt werden."
 
 #: app/dev/scripts/models/contact.coffee:15
 msgid "Please enter your name"
@@ -139,3 +140,6 @@ msgstr "Bitte ein Angebot eingeben."
 #: app/dev/scripts/models/contact.coffee:27
 msgid "Please enter a message"
 msgstr "Bitte eine Nachricht eingeben."
+
+#~ msgid "credentials"
+#~ msgstr "Referenzen"
