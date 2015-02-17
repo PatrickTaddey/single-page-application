@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 07:21+0100\n"
+"POT-Creation-Date: 2015-02-17 11:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,34 +17,65 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: app/dev/templates/profile.html:5
-msgid "Profile"
+#: app/dev/templates/profile.html:5 app/dev/templates/menu.html:25
+msgid "profile"
 msgstr ""
 
-#: app/dev/templates/footer.html:4
+#: app/dev/templates/profile.html:10
+msgid "briefing"
+msgstr ""
+
+#: app/dev/templates/profile.html:17
+msgid "order now"
+msgstr ""
+
+#: app/dev/templates/footer.html:6
 msgid "fork me on github"
 msgstr ""
 
-#: app/dev/templates/footer.html:25 app/dev/templates/contact.html:39
-#: app/dev/templates/menu.html:40 app/dev/templates/legal_notice.html:5
+#: app/dev/templates/footer.html:9
+msgid "buy this domain"
+msgstr ""
+
+#: app/dev/templates/footer.html:27 app/dev/templates/contact.html:53
+#: app/dev/templates/menu.html:34 app/dev/templates/legal_notice.html:5
 msgid "legal notice"
 msgstr ""
 
-#: app/dev/templates/contact.html:5 app/dev/templates/menu.html:37
-#: app/dev/templates/menu.html:39
+#: app/dev/templates/contact.html:5 app/dev/templates/menu.html:31
 msgid "contact"
 msgstr ""
 
-#: app/dev/templates/contact.html:9
+#: app/dev/templates/contact.html:13
 msgid "name"
 msgstr ""
 
-#: app/dev/templates/contact.html:17
+#: app/dev/templates/contact.html:14
+msgid "\"placeholder name\""
+msgstr ""
+
+#: app/dev/templates/contact.html:21
 msgid "email"
 msgstr ""
 
-#: app/dev/templates/contact.html:25
+#: app/dev/templates/contact.html:22
+msgid "\"placeholder email\""
+msgstr ""
+
+#: app/dev/templates/contact.html:30
+msgid "offer"
+msgstr ""
+
+#: app/dev/templates/contact.html:31
+msgid "\"placeholder offer\""
+msgstr ""
+
+#: app/dev/templates/contact.html:39 app/dev/templates/menu.html:33
 msgid "message"
+msgstr ""
+
+#: app/dev/templates/contact.html:40
+msgid "\"placeholder message\""
 msgstr ""
 
 #: app/dev/templates/skills.html:5
@@ -64,71 +95,31 @@ msgstr ""
 msgid "goto"
 msgstr ""
 
-#: app/dev/templates/menu.html:22
+#: app/dev/templates/menu.html:16
 msgid "menu"
 msgstr ""
 
-#: app/dev/templates/menu.html:27
+#: app/dev/templates/menu.html:21
 msgid "start"
 msgstr ""
 
-#: app/dev/templates/menu.html:29 app/dev/templates/menu.html:31
-msgid "profile"
+#: app/dev/templates/menu.html:23
+msgid "about"
 msgstr ""
 
-#: app/dev/templates/menu.html:32
+#: app/dev/templates/menu.html:26
 msgid "skills"
 msgstr ""
 
-#: app/dev/templates/menu.html:33
+#: app/dev/templates/menu.html:27
 msgid "credentials"
 msgstr ""
 
-#: app/dev/templates/main.html:5
-msgid "Hi, I'm Patrick Taddey"
-msgstr ""
-
-#: app/dev/templates/main.html:19
-msgid "And I-develop JS-WebApps"
-msgstr ""
-
-#: app/dev/templates/main.html:25
-msgid "performant"
-msgstr ""
-
-#: app/dev/templates/main.html:27
-msgid "text performant"
-msgstr ""
-
-#: app/dev/templates/main.html:32
-msgid "fast"
-msgstr ""
-
-#: app/dev/templates/main.html:34
-msgid "text fast"
-msgstr ""
-
-#: app/dev/templates/main.html:39
-msgid "responsive"
-msgstr ""
-
-#: app/dev/templates/main.html:41
-msgid "text responsive"
-msgstr ""
-
-#: app/dev/templates/main.html:46
-msgid "extendable"
-msgstr ""
-
-#: app/dev/templates/main.html:48
-msgid "text extendable"
-msgstr ""
-
-#: app/dev/scripts/views/contact.coffee:19
+#: app/dev/scripts/views/contact.coffee:23
 msgid "Mail sent"
 msgstr ""
 
-#: app/dev/scripts/views/contact.coffee:21
+#: app/dev/scripts/views/contact.coffee:25
 msgid "Mail not sent"
 msgstr ""
 
@@ -140,6 +131,10 @@ msgstr ""
 msgid "Please enter your email"
 msgstr ""
 
-#: app/dev/scripts/models/contact.coffee:24
+#: app/dev/scripts/models/contact.coffee:22
+msgid "Please enter a valid offer"
+msgstr ""
+
+#: app/dev/scripts/models/contact.coffee:27
 msgid "Please enter a message"
 msgstr ""
