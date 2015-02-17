@@ -21,8 +21,10 @@ class ContactView extends BaseView
 			ĈontactModel.save null,
 				success: (model, response, options) =>
 					Helper.show_alert("success", @gettext("Mail sent"))
+					$("form")[0].reset()
 				error: (model, response, options) =>
 					Helper.show_alert("warning", @gettext("Mail not sent"))
+					$("form")[0].reset()
 
 		"blur .js-form-field": (event) ->
 			name = $(event.target).attr("name")
