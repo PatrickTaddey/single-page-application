@@ -2,7 +2,7 @@
 	position: relative;
 	background-color: $white;
 	margin-top:-40px;
-	padding-bottom: 40px;
+	padding-bottom: 60px;
 	margin-bottom:-40px;
 	border: 1px solid #ccc;		
 	padding-left:rem-calc(20);
@@ -43,8 +43,14 @@
 	.js-skill-filter {
 		text-transform: capitalize;
 	}
-	.teaser p {
-		font-size: rem-calc(13px);
+	.teaser {
+		h6 {
+			margin-top:rem-calc(15px);
+			margin-bottom:rem-calc(15px);
+		}
+		p {
+			font-size: rem-calc(14px);
+		}
 	}
 	.circle {
 		@include circle(95px,$light-grey);
@@ -62,6 +68,9 @@
 	}
 	.pricing-table {
 		border-color:$green;
+		li {
+			border-color: $green;
+		}
 		.price {
 			background-color: $green;
 			color:$white;
@@ -88,14 +97,5 @@
 				color:$white;		
 			}
 		}
-	}
-}
-
-.green-button {
-	background-color: $green;	
-	color:$white;
-	&:hover, &.open{
-		color:$white;
-		background-color: lighten($green, 5%);		
 	}
 }

@@ -32,3 +32,19 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+.content-area a {
+	color:$grey;
+	font-weight:bold !important;
+	&:hover {
+		color:darken($grey, 10%);
+	}
+}
+
+.green-button {
+	background-color: $green;	
+	color:$white;
+	&:hover, &.open{
+		color:$white;
+		background-color: lighten($green, 5%);		
+	}
+}

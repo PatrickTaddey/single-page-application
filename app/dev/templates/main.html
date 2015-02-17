@@ -2,28 +2,38 @@
 {% block content %}
 	<div class="row">
 		<div class="large-12 columns">
-			<h4 class="title"><span>{{ profile.get("welcome").title }}</span></h4>
+			<h4 class="title"><span>{{ profile.get("intro").title }}</span></h4>
 		</div>
 	</div>
 	<div class="row">
 		<div class="small-12 medium-10 large-8 columns">
-			{{ profile.get("welcome").text }}
+			{{ profile.get("intro").text }}
 		</div>
 	</div>
-	<div class="row top-margin-20">
+	<div class="row top-margin-25">
 		<div class="large-12 columns">
 			<h4 class="title"><span>{{ profile.get("features").title }}</span></h4>
 		</div>
 	</div>
 	<div class="row top-margin-20 teaser">
-	{% for feature in profile.get("features").items %}
-		<div class="medium-3 columns text-center">
-			<i class="fa {{ feature.icon }} circle"></i>
-			<h6 class="special"><span>{{ feature.title }}</span></h6>
-			<p>
+		{% for feature in profile.get("features").items %}
+			<div class="medium-3 columns text-center">
+				<i class="fa {{ feature.icon }} circle"></i>
+				<h6 class="special"><span>{{ feature.title }}</span></h6>
+				<p>
 				{{ feature.text }}
-			</p>
+				</p>
+			</div>
+		{% endfor %}
+	</div>
+	<div class="row top-margin-25">
+		<div class="small-12 medium-6 columns">
+			<h4 class="title"><span>{{ profile.get("more").title }}</span></h4>
+			{{ profile.get("more").text }}
 		</div>
-	{% endfor %}
+		<div class="small-12 medium-6 columns">
+			<h4 class="title"><span>{{ profile.get("technology").title }}</span></h4>
+			{{ profile.get("technology").text }}
+		</div>
 	</div>
 {% endblock %}
