@@ -10,7 +10,13 @@ ContactView = require("./views/contact.coffee")
 # export a singleton of the ProfileModel
 ProfileModel = require("./models/profile.coffee")
 
-# AppRouter: exports a singleton
+###
+	AppRouter extends from Backbone.Router
+	- fetch ProfileModel in initializer
+	- handle routing
+	- display views
+	exports a singleton
+###
 class AppRouter extends Backbone.Router
 	routes :
 		"" : "index"

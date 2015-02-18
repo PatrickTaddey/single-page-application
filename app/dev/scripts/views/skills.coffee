@@ -3,7 +3,7 @@ $ = require("jquery")
 SkillsCollection = require("../collections/skills.coffee")
 
 ###
-	MenuView extends from BaseView
+	SkillsView extends from BaseView
 	- loads the skills-collection from the api
 	exports singleton
 ###
