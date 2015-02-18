@@ -1,8 +1,11 @@
 $ = require("jquery")
 Backbone = require("backbone")
 Backbone.$ = $
-i18n = require("../utils/i18n.coffee")
 
+###
+	BaseModel extends from Backbone.Model
+	- parsing the api response
+###
 class BaseModel extends Backbone.Model
 	parse : (response) ->
 		return response.data

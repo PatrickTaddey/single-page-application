@@ -2,6 +2,11 @@ BaseView = require("./base.coffee")
 $ = require("jquery")
 SkillsCollection = require("../collections/skills.coffee")
 
+###
+	MenuView extends from BaseView
+	- loads the skills-collection from the api
+	exports singleton
+###
 class SkillsView extends BaseView
 	template: "app/dev/templates/skills.html"
 	events:

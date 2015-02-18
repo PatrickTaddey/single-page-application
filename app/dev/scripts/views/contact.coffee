@@ -8,12 +8,19 @@ Backbone = require("backbone")
 require("backbone-validator")
 require("jquery-serialize-object")
 
+###
+	ContactView extends from BaseView
+	- used for sending contact messages
+	- validation of the contact form
+	exports singleton
+###
 class ContactView extends BaseView
 	template: "app/dev/templates/contact.html"
 	events: 
 		"click .close-alert": (event) ->
 			event.preventDefault()
 			$(".alert-box").addClass("hide")
+			
 		"submit #js-contact-form": (event) ->
 			event.preventDefault()
 			ĈontactModel.set($('form').serializeObject())
@@ -30,7 +37,6 @@ class ContactView extends BaseView
 			name = $(event.target).attr("name")
 			value = $(event.target).val()
 			ĈontactModel.set(name, value).validate(name)
-
 
 	initialize: ->
 		@$el = $(@regions.content)

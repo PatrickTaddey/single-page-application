@@ -2,6 +2,11 @@ BaseModel = require("./base.coffee")
 ConfigModel = require("./config.coffee")
 i18n = require("../utils/i18n.coffee")
 
+###
+	ContactModel extends from BaseModel
+	- form validation, sharing contact data
+	exports singleton
+###
 class ContactModel extends BaseModel
 	urlRoot: () ->
 		ConfigModel.get("api") + "contacts"
