@@ -1,15 +1,16 @@
 Backbone = require("backbone")
-require("routefilter")
-$ = require("jquery")
-Backbone.$ = window.$
+
+# require views & models
 MenuView = require("./views/menu.coffee")
 FooterView = require("./views/footer.coffee")
-MainView = require("./views/main.coffee")
-ProfileView = require("./views/profile.coffee")
+ContentView = require("./views/content.coffee")
 SkillsView = require("./views/skills.coffee")
-ProfileModel = require("./models/profile.coffee")
 ContactView = require("./views/contact.coffee")
-LegalNoticeView = require("./views/legal_notice.coffee")
+
+# export a singleton of the ProfileModel
+ProfileModel = require("./models/profile.coffee")
+
+# AppRouter: exports a singleton
 class AppRouter extends Backbone.Router
 	routes :
 		"" : "index"
@@ -18,6 +19,9 @@ class AppRouter extends Backbone.Router
 		"experiences" : "experiences"
 		"contact(/:buy)" : "contact"
 		"legal_notice" : "legal_notice"
+		"*undefined" : "content"
+
+	# we have to fetch the ProfileModel once
 	initialize: () ->
 		ProfileModel.fetch
 			success: (model, response, options) =>
@@ -25,14 +29,17 @@ class AppRouter extends Backbone.Router
 				FooterView.show()
 				Backbone.history.start()
 	index: () ->
-		MainView.show()
+		ContentView.show("main.html")
 	profile: () ->
-		ProfileView.show()
+		ContentView.show("profile.html")
+	legal_notice: () ->
+		ContentView.show("legal_notice.html")
+	content: () ->
+		ContentView.show("404.html")
 	skills: () ->
 		SkillsView.show()
 	contact: (buy) ->
 		ContactView.show(buy)
-	legal_notice: () ->
-		LegalNoticeView.show()
-		
+
+# export a singleton of the AppRouter
 module.exports = new AppRouter()
