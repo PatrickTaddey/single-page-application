@@ -2,7 +2,7 @@
 	position: relative;
 	background-color: $white;
 	margin-top:-40px;
-	padding-bottom: 60px;
+	padding-bottom: 40px;
 	margin-bottom:-40px;
 	border: 1px solid #ccc;		
 	padding-left:rem-calc(20);
@@ -47,9 +47,6 @@
 		h6 {
 			margin-top:rem-calc(15px);
 			margin-bottom:rem-calc(15px);
-		}
-		p {
-			font-size: rem-calc(14px);
 		}
 	}
 	.circle {
