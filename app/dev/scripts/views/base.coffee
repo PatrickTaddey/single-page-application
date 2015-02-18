@@ -6,7 +6,7 @@ Helper = require("../utils/helper.coffee")
 	BaseView extends from Backbone.View
 	shares base functionality like 
 	- rendering template files
-	- postioning the footer
+	- positioning the footer
 	- gettext translation
 ###
 class BaseView extends Backbone.View
