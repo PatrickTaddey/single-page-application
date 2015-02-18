@@ -1,3 +1,7 @@
+###
+	here we start the app as singleton
+###
+
 # export window.jQuery once so we can use it in the App
 window.jQuery = require("jquery")
 
