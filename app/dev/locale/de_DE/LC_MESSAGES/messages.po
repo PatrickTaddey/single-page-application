@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-17 13:45+0100\n"
+"POT-Creation-Date: 2015-02-18 10:53+0100\n"
 "PO-Revision-Date: 2014-11-27 15:13+0200\n"
 "Last-Translator: Patrick Taddey <tooltonix@gmail.com>\n"
 "Language-Team: German \n"
@@ -29,6 +29,14 @@ msgstr "Im Angebot"
 #: app/dev/templates/profile.html:17
 msgid "order now"
 msgstr "Jetzt bestellen!"
+
+#: app/dev/templates/404.html:5
+msgid "404"
+msgstr "Route nicht gefunden"
+
+#: app/dev/templates/404.html:6
+msgid "404 text"
+msgstr "Diese Route kenne ich noch nicht!"
 
 #: app/dev/templates/footer.html:6
 msgid "fork me on github"
@@ -116,27 +124,27 @@ msgstr "Über mich"
 msgid "skills"
 msgstr "Skills"
 
-#: app/dev/scripts/views/contact.coffee:23
+#: app/dev/scripts/views/contact.coffee:30
 msgid "Mail sent"
 msgstr "Danke! Deine E-Mail wurde verschickt."
 
-#: app/dev/scripts/views/contact.coffee:25
+#: app/dev/scripts/views/contact.coffee:33
 msgid "Mail not sent"
 msgstr "Fehler. Deine E-Mail konnte nicht verschickt werden."
 
-#: app/dev/scripts/models/contact.coffee:15
+#: app/dev/scripts/models/contact.coffee:20
 msgid "Please enter your name"
 msgstr "Bitte einen Namen eingeben."
 
-#: app/dev/scripts/models/contact.coffee:19
+#: app/dev/scripts/models/contact.coffee:24
 msgid "Please enter your email"
 msgstr "Bitte eine valide E-Mail eingeben."
 
-#: app/dev/scripts/models/contact.coffee:22
+#: app/dev/scripts/models/contact.coffee:27
 msgid "Please enter a valid offer"
 msgstr "Bitte ein Angebot eingeben."
 
-#: app/dev/scripts/models/contact.coffee:27
+#: app/dev/scripts/models/contact.coffee:32
 msgid "Please enter a message"
 msgstr "Bitte eine Nachricht eingeben."
 
