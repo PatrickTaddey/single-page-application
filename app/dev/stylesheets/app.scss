@@ -1,11 +1,33 @@
 @import "../vendor/components-font-awesome/scss/font-awesome.scss";
+
+// have to import colors, settings & overrides before importing foundation
 @import "colors.scss";
 @import "_settings.scss";
 @import "overrides/top-bar.scss";
 @import "overrides/sub-nav.scss";
 @import "overrides/typography.scss";
-@import "../vendor/foundation/scss/foundation.scss";
+
+// import some foundation stuff
+//@import "../vendor/foundation/scss/foundation.scss";
+@import "../vendor/foundation/scss/foundation/components/alert-boxes";
+@import "../vendor/foundation/scss/foundation/components/buttons";
+@import "../vendor/foundation/scss/foundation/components/dropdown";
+@import "../vendor/foundation/scss/foundation/components/dropdown-buttons";
+@import "../vendor/foundation/scss/foundation/components/forms";
+@import "../vendor/foundation/scss/foundation/components/grid";
+@import "../vendor/foundation/scss/foundation/components/inline-lists";
+@import "../vendor/foundation/scss/foundation/components/labels";
+@import "../vendor/foundation/scss/foundation/components/panels";
+@import "../vendor/foundation/scss/foundation/components/pricing-tables";
+@import "../vendor/foundation/scss/foundation/components/sub-nav";
+@import "../vendor/foundation/scss/foundation/components/thumbs";
+@import "../vendor/foundation/scss/foundation/components/top-bar";
+@import "../vendor/foundation/scss/foundation/components/type";
+@import "../vendor/foundation/scss/foundation/components/visibility";
+
+// import own components & mixins
 @import "mixins.scss";
+@import "components/elements.scss";
 @import "components/typo.scss";
 @import "components/header.scss";
 @import "components/content.scss";
