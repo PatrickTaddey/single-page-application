@@ -31,11 +31,6 @@ module.exports = (grunt) ->
 				files:
 					"app/release/stylesheets/app.min.css": "app/dev/stylesheets/app.scss"
 
-		concat:
-			build:
-				dest: "app/build/stylesheets/app.css"
-				src: ["app/dev/vendor/semantic/dist/semantic.css", "app/build/stylesheets/app.css"]
-
 		connect:
 			build:
 				options:
@@ -87,15 +82,6 @@ module.exports = (grunt) ->
 		uglify:
 			release:
 				files: 'app/release/scripts/app.min.js': ['app/build/scripts/app.js']
-
-		cssmin:
-			release:
-				files:
-					"app/release/stylesheets/app.min.css": [
-						"app/release/stylesheets/app.min.css"
-					]
-				options:
-					keepSpecialComments: 0
 
 		watch:
 			build_js:
@@ -151,7 +137,6 @@ module.exports = (grunt) ->
 			"nunjucks"
 			"browserify:app",
 			"sass:build",
-			"concat:build",
 			"injector:build",
 			"copy:build",
 			"connect:build",
@@ -168,6 +153,7 @@ module.exports = (grunt) ->
 			"injector:release",
 			"asset_cachebuster"
 		]
+
 		grunt.registerTask "locale", [
 			"shell",
 			"po2json"
