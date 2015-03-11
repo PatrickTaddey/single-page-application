@@ -30,7 +30,7 @@ class Helper
 	# get site to display the logo in menu
 	get_site:()->
 		hostname = window.location.hostname
-		return hostname.split(".")?[0]
+		if hostname.split(".")?[0] is "www" then hostname.split(".")?[1] else hostname.split(".")?[0]
 
 	# handle routing - set active element in menu
 	handle_routing:(route, params) ->
