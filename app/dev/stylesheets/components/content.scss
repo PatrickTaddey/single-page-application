@@ -52,4 +52,7 @@
 	#drop-one > span {
 		font-size: rem-calc(12px) !important;
 	}
+	[class*="column"] + [class*="column"]:last-child {
+		float: left;
+	}
 }

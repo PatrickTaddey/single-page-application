@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-11 07:57+0100\n"
+"POT-Creation-Date: 2015-03-11 08:16+0100\n"
 "PO-Revision-Date: 2014-11-27 15:13+0200\n"
 "Last-Translator: Patrick Taddey <tooltonix@gmail.com>\n"
 "Language-Team: German \n"
@@ -135,6 +135,10 @@ msgstr "Skills"
 #: app/dev/templates/menu.html:36
 msgid "domains"
 msgstr "Domainverkauf"
+
+#: app/dev/templates/main.html:13
+msgid "show domains"
+msgstr "Domains anzeigen"
 
 #: app/dev/scripts/views/contact.coffee:31
 msgid "Mail sent"
