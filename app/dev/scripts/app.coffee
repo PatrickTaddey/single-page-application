@@ -41,6 +41,7 @@ class AppRouter extends Backbone.Router
 	# handle routing - set active element in menu
 	before: (route, params) ->
 		Helper.handle_routing(route, params)
+		Helper.track_ga()
 	index: () ->
 		ContentView.show("main.html")
 	profile: () ->

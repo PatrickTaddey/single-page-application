@@ -1,4 +1,5 @@
 $ = require("jquery")
+Backbone = require("backbone")
 _ = require("underscore")
 
 ###
@@ -39,4 +40,12 @@ class Helper
 		element.parent().addClass("active")
 		if element.closest("ul").hasClass("dropdown")
 			element.closest("li.has-dropdown").addClass("active")
+
+	track_ga: () ->
+		try
+			ga('send', 'pageview', 
+				page: Backbone.history.getFragment()
+			)
+		catch error
+			console.log "google analytics script failed - " + error
 module.exports = new Helper()
