@@ -24,7 +24,13 @@
 		&.domain {
 			font-weight:bold;
 			font-size:rem-calc(16px);
-
+			a {
+				color:$white !important;
+				&:hover {
+					color:$white !important;
+					text-decoration:underline;
+				}
+			}
 			i {
 				font-weight:normal !important;
 				font-size:rem-calc(16px);

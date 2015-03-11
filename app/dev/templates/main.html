@@ -6,11 +6,12 @@
 			{{ profile.get("intro").text }}
 		</div>
 		<div class="small-12 medium-6 columns">
+			<div class="show-for-small-only top-margin-25"></div>
 			<h4 class="title"><span>{{ profile.get("domains").title }}</span></h4>
 			{{ profile.get("domains").text }}
 		</div>
 	</div>
-	<div class="row top-margin-25">
+	<div class="row top-margin-40">
 		<div class="large-12 columns">
 			<h4 class="title"><span>{{ profile.get("features").title }}</span></h4>
 		</div>
@@ -26,7 +27,7 @@
 			</div>
 		{% endfor %}
 	</div>
-	<div class="row top-margin-25">
+	<div class="row top-margin-40">
 		<div class="small-12 medium-6 columns">
 			<h4 class="title"><span>{{ profile.get("more").title }}</span></h4>
 			{{ profile.get("more").text }}
