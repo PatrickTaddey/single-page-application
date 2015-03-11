@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-18 10:53+0100\n"
+"POT-Creation-Date: 2015-03-11 07:57+0100\n"
 "PO-Revision-Date: 2014-11-27 15:13+0200\n"
 "Last-Translator: Patrick Taddey <tooltonix@gmail.com>\n"
 "Language-Team: German \n"
@@ -108,6 +108,14 @@ msgstr "Alle"
 msgid "goto"
 msgstr "Zum Anbieter"
 
+#: app/dev/templates/domains.html:5
+msgid "domains for sale"
+msgstr "Domainverkauf"
+
+#: app/dev/templates/domains.html:20
+msgid "buy now"
+msgstr "Gebot senden"
+
 #: app/dev/templates/menu.html:16
 msgid "menu"
 msgstr "Menu"
@@ -124,11 +132,15 @@ msgstr "Über mich"
 msgid "skills"
 msgstr "Skills"
 
-#: app/dev/scripts/views/contact.coffee:30
+#: app/dev/templates/menu.html:36
+msgid "domains"
+msgstr "Domainverkauf"
+
+#: app/dev/scripts/views/contact.coffee:31
 msgid "Mail sent"
 msgstr "Danke! Deine E-Mail wurde verschickt."
 
-#: app/dev/scripts/views/contact.coffee:33
+#: app/dev/scripts/views/contact.coffee:34
 msgid "Mail not sent"
 msgstr "Fehler. Deine E-Mail konnte nicht verschickt werden."
 
@@ -147,6 +159,3 @@ msgstr "Bitte ein Angebot eingeben."
 #: app/dev/scripts/models/contact.coffee:32
 msgid "Please enter a message"
 msgstr "Bitte eine Nachricht eingeben."
-
-#~ msgid "credentials"
-#~ msgstr "Referenzen"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-02-18 10:53+0100\n"
+"POT-Creation-Date: 2015-03-11 07:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -107,6 +107,14 @@ msgstr ""
 msgid "goto"
 msgstr ""
 
+#: app/dev/templates/domains.html:5
+msgid "domains for sale"
+msgstr ""
+
+#: app/dev/templates/domains.html:20
+msgid "buy now"
+msgstr ""
+
 #: app/dev/templates/menu.html:16
 msgid "menu"
 msgstr ""
@@ -123,11 +131,15 @@ msgstr ""
 msgid "skills"
 msgstr ""
 
-#: app/dev/scripts/views/contact.coffee:30
+#: app/dev/templates/menu.html:36
+msgid "domains"
+msgstr ""
+
+#: app/dev/scripts/views/contact.coffee:31
 msgid "Mail sent"
 msgstr ""
 
-#: app/dev/scripts/views/contact.coffee:33
+#: app/dev/scripts/views/contact.coffee:34
 msgid "Mail not sent"
 msgstr ""
 
