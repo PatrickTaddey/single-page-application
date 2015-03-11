@@ -1,4 +1,6 @@
 Backbone = require("backbone")
+require("backbone.routefilter")
+Helper = require("./utils/helper.coffee")
 
 # require views & models
 MenuView = require("./views/menu.coffee")
@@ -36,6 +38,9 @@ class AppRouter extends Backbone.Router
 				MenuView.show()
 				FooterView.show()
 				Backbone.history.start()
+	# handle routing - set active element in menu
+	before: (route, params) ->
+		Helper.handle_routing(route, params)
 	index: () ->
 		ContentView.show("main.html")
 	profile: () ->
