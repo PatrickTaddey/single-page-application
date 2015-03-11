@@ -20,8 +20,5 @@ class DomainsView extends BaseView
 				$(document).foundation
 					equalizer:
 						equalize_on_stack: true
-
-
-
-
+						
 module.exports = new DomainsView()
