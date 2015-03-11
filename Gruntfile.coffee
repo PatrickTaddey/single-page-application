@@ -95,7 +95,7 @@ module.exports = (grunt) ->
 				files: [
 					"app/dev/**/*.scss"
 				]
-				tasks: ["sass:build", "concat:build"]
+				tasks: ["sass:build"]
 				options:
 					livereload: true
 			build_templates:

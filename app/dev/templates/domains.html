@@ -1,0 +1,26 @@
+{% extends "app/dev/templates/base.html" %}
+{% block content %}
+	<div class="row">
+		<div class="small-12 columns">
+			<h4 class="title"><span>{{ i18n.gettext("domains for sale") }}</span></h4>
+		</div>
+	</div>
+	<div class="row top-margin-10" data-equalizer>
+		{% for domain in domains %}
+			<div class="small-12 medium-6 large-4 columns">
+				<ul class="pricing-table" >
+					<li class="price domain">{{ domain.get("name") }}</li>
+					<li class="description" data-equalizer-watch>{{ domain.get("description") }}</li>
+					<li class="bullet-item">
+						{% for tag in domain.get("tags") %}
+							<span class="secondary radius label">{{ tag }}</span>
+						{% endfor %}
+					</li>
+					<li class="cta-button">
+						<a class="button small radius" href="#contact/{{ domain.get('name') }}"><i class='fa fa-shopping-cart'></i> {{ i18n.gettext("buy now") }}</a>
+					</li>
+				</ul>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}

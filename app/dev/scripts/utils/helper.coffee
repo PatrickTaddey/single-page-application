@@ -22,4 +22,8 @@ class Helper
 		.find(".js-alert-message").text(alert_message)
 		$(document).foundation('alert', 'reflow')
 
+	get_site:()->
+		hostname = window.location.hostname
+		return hostname.split(".")?[0]
+
 module.exports = new Helper()

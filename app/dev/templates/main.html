@@ -1,13 +1,13 @@
 {% extends "app/dev/templates/base.html" %}
 {% block content %}
 	<div class="row">
-		<div class="large-12 columns">
+		<div class="small-12 medium-6 columns">
 			<h4 class="title"><span>{{ profile.get("intro").title }}</span></h4>
-		</div>
-	</div>
-	<div class="row">
-		<div class="small-12 medium-10 large-8 columns">
 			{{ profile.get("intro").text }}
+		</div>
+		<div class="small-12 medium-6 columns">
+			<h4 class="title"><span>{{ profile.get("domains").title }}</span></h4>
+			{{ profile.get("domains").text }}
 		</div>
 	</div>
 	<div class="row top-margin-25">

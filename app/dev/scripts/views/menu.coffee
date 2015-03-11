@@ -1,6 +1,7 @@
 BaseView = require("./base.coffee")
 ProfileModel = require("../models/profile.coffee")
 $ = require("jquery")
+Helper = require("../utils/helper.coffee")
 
 ###
 	MenuView extends from BaseView
@@ -19,13 +20,9 @@ class MenuView extends BaseView
 				$(event.currentTarget).closest("ul").closest("li.has-dropdown").addClass("active")
 	initialize: ->
 		@$el = $(@regions.menu)
-
-		# use window.location.hostname to display the logo
-		hostname = window.location.hostname
-		@site = hostname.split(".")?[0]
-
+		
 	show: () ->
-		$(@$el).html(@render(@template, profile: ProfileModel, site: @site))
+		$(@$el).html(@render(@template, profile: ProfileModel, site: Helper.get_site()))
 		$(document).foundation()
 		
 module.exports = new MenuView()

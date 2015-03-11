@@ -5,6 +5,7 @@ MenuView = require("./views/menu.coffee")
 FooterView = require("./views/footer.coffee")
 ContentView = require("./views/content.coffee")
 SkillsView = require("./views/skills.coffee")
+DomainsView = require("./views/domains.coffee")
 ContactView = require("./views/contact.coffee")
 
 # export a singleton of the ProfileModel
@@ -23,8 +24,9 @@ class AppRouter extends Backbone.Router
 		"profile" : "profile"
 		"skills" : "skills"
 		"experiences" : "experiences"
-		"contact(/:buy)" : "contact"
+		"contact(/:domain)" : "contact"
 		"legal_notice" : "legal_notice"
+		"domains" : "domains"
 		"*undefined" : "content"
 
 	# we have to fetch the ProfileModel once
@@ -44,8 +46,10 @@ class AppRouter extends Backbone.Router
 		ContentView.show("404.html")
 	skills: () ->
 		SkillsView.show()
-	contact: (buy) ->
-		ContactView.show(buy)
+	domains: () ->
+		DomainsView.show()
+	contact: (domain) ->
+		ContactView.show(domain)
 
 # export a singleton of the AppRouter
 module.exports = new AppRouter()

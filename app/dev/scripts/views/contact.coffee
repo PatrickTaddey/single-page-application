@@ -24,6 +24,7 @@ class ContactView extends BaseView
 		"submit #js-contact-form": (event) ->
 			event.preventDefault()
 			ĈontactModel.set($('form').serializeObject())
+			ĈontactModel.set("domain", @domain) if @domain?
 			return if !ĈontactModel.isValid()
 			ĈontactModel.save null,
 				success: (model, response, options) =>
@@ -42,11 +43,10 @@ class ContactView extends BaseView
 		@$el = $(@regions.content)
 		@bindValidation(ĈontactModel)
 
-	show: (buy) ->
-		$(@$el).html(@render(@template, profile: ProfileModel, buy: buy))
+	show: (domain) ->
+		@domain = domain if domain?
+		$(@$el).html(@render(@template, profile: ProfileModel, domain: domain))
 		@position_footer()
-		$(document).on 'close.fndtn.alert', (event) ->
-			console.info('An alert box has been closed!')
 
 	onValidField: (attrName, attrValue, model) ->
 		element = $('[name=' + attrName + ']')
