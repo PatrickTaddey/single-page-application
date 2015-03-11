@@ -10,7 +10,7 @@ _ = require("underscore")
 	exports singleton
 ###
 class Helper
-	
+
 	# position footer and jump to top
 	position_footer:()->
 		window_height = $(window).height()
@@ -34,6 +34,7 @@ class Helper
 
 	# handle routing - set active element in menu
 	handle_routing:(route, params) ->
+		$("nav li").removeClass("active")
 		element = $('a[href~="#' + route.split('(')[0] + '"]')
 		element.parent().addClass("active")
 		if element.closest("ul").hasClass("dropdown")
