@@ -35,6 +35,7 @@ class AppRouter extends Backbone.Router
 	initialize: () ->
 		ProfileModel.fetch
 			success: (model, response, options) =>
+				console.log model
 				MenuView.show()
 				FooterView.show()
 				Backbone.history.start()

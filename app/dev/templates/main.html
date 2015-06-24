@@ -1,44 +1,48 @@
 {% extends "app/dev/templates/base.html" %}
 {% block content %}
-	<div class="row">
+<div class="row">
 		<div class="small-12 medium-6 columns">
 			<h4 class="title"><span>{{ profile.get("intro").title }}</span></h4>
 			{{ profile.get("intro").text }}
 		</div>
 		<div class="small-12 medium-6 columns">
-			<div class="show-for-small-only top-margin-25"></div>
+			<div class="show-for-small-only top-margin-20"></div>
+			<h4 class="title"><span>{{ profile.get("more").title }}</span></h4>
+			{{ profile.get("more").text }}
+		</div>
+	</div>
+
+	{% for feature_list in profile.get("features") %}
+	<div class="row top-margin-30">
+		<div class="large-12 columns">
+			<h4 class="title"><span>{{ feature_list.title }}</span></h4>
+		</div>
+	</div>
+	<div class="row top-margin-10 teaser">
+			{% for feature_items in feature_list.items %}
+			<div class="medium-4 columns text-center">
+				<i class="fa {{ feature_items.icon }} circle"></i>
+				<h6 class="special"><span>{{ feature_items.title }}</span></h6>
+				<p>
+					{{ feature_items.text }}
+				</p>
+			</div>
+			{% endfor %}
+	</div>
+	{% endfor %}
+
+	<div class="row top-margin-30">
+		<div class="small-12 medium-6 columns">
+			<h4 class="title"><span>{{ profile.get("technology").title }}</span></h4>
+			{{ profile.get("technology").text }}
+		</div>
+		<div class="small-12 medium-6 columns">
+			<div class="show-for-small-only top-margin-20"></div>
 			<h4 class="title"><span>{{ profile.get("domains").title }}</span></h4>
 			{{ profile.get("domains").text }}
 			<div class="text-right top-margin-10">
 				<a class="button small radius green-button" href="#domains"><i class='fa fa-search-plus'></i> {{ i18n.gettext("show domains") }}</a>
 			</div>
-		</div>
-	</div>
-	<div class="row top-margin-30">
-		<div class="large-12 columns">
-			<h4 class="title"><span>{{ profile.get("features").title }}</span></h4>
-		</div>
-	</div>
-	<div class="row top-margin-20 teaser">
-		{% for feature in profile.get("features").items %}
-			<div class="medium-3 columns text-center">
-				<i class="fa {{ feature.icon }} circle"></i>
-				<h6 class="special"><span>{{ feature.title }}</span></h6>
-				<p>
-				{{ feature.text }}
-				</p>
-			</div>
-		{% endfor %}
-	</div>
-	<div class="row top-margin-30">
-		<div class="small-12 medium-6 columns">
-			<h4 class="title"><span>{{ profile.get("more").title }}</span></h4>
-			{{ profile.get("more").text }}
-		</div>
-		<div class="small-12 medium-6 columns">
-			<div class="show-for-small-only top-margin-25"></div>
-			<h4 class="title"><span>{{ profile.get("technology").title }}</span></h4>
-			{{ profile.get("technology").text }}
 		</div>
 	</div>
 {% endblock %}
