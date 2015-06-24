@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-11 08:16+0100\n"
+"POT-Creation-Date: 2015-06-24 23:05+0200\n"
 "PO-Revision-Date: 2014-11-27 15:13+0200\n"
 "Last-Translator: Patrick Taddey <tooltonix@gmail.com>\n"
 "Language-Team: German \n"
@@ -47,11 +47,11 @@ msgid "buy this domain"
 msgstr "buy this domain"
 
 #: app/dev/templates/footer.html:27 app/dev/templates/contact.html:53
-#: app/dev/templates/menu.html:33 app/dev/templates/legal_notice.html:5
+#: app/dev/templates/menu.html:34 app/dev/templates/legal_notice.html:5
 msgid "legal notice"
 msgstr "Impressum"
 
-#: app/dev/templates/contact.html:5 app/dev/templates/menu.html:30
+#: app/dev/templates/contact.html:5 app/dev/templates/menu.html:31
 msgid "contact"
 msgstr "Kontakt"
 
@@ -79,7 +79,7 @@ msgstr "Angebot"
 msgid "\"placeholder offer\""
 msgstr "\"z.B. '100'\""
 
-#: app/dev/templates/contact.html:39 app/dev/templates/menu.html:32
+#: app/dev/templates/contact.html:39 app/dev/templates/menu.html:33
 msgid "message"
 msgstr "Nachricht"
 
@@ -126,17 +126,21 @@ msgstr "Home"
 
 #: app/dev/templates/menu.html:23
 msgid "about"
-msgstr "Über mich"
+msgstr "Profil"
 
 #: app/dev/templates/menu.html:26
+msgid "portfolio"
+msgstr "Portfolio"
+
+#: app/dev/templates/menu.html:27
 msgid "skills"
 msgstr "Skills"
 
-#: app/dev/templates/menu.html:36
+#: app/dev/templates/menu.html:37
 msgid "domains"
 msgstr "Domainverkauf"
 
-#: app/dev/templates/main.html:13
+#: app/dev/templates/main.html:44
 msgid "show domains"
 msgstr "Domains anzeigen"
 

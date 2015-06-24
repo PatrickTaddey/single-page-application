@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-03-11 08:16+0100\n"
+"POT-Creation-Date: 2015-06-24 23:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -46,11 +46,11 @@ msgid "buy this domain"
 msgstr ""
 
 #: app/dev/templates/footer.html:27 app/dev/templates/contact.html:53
-#: app/dev/templates/menu.html:33 app/dev/templates/legal_notice.html:5
+#: app/dev/templates/menu.html:34 app/dev/templates/legal_notice.html:5
 msgid "legal notice"
 msgstr ""
 
-#: app/dev/templates/contact.html:5 app/dev/templates/menu.html:30
+#: app/dev/templates/contact.html:5 app/dev/templates/menu.html:31
 msgid "contact"
 msgstr ""
 
@@ -78,7 +78,7 @@ msgstr ""
 msgid "\"placeholder offer\""
 msgstr ""
 
-#: app/dev/templates/contact.html:39 app/dev/templates/menu.html:32
+#: app/dev/templates/contact.html:39 app/dev/templates/menu.html:33
 msgid "message"
 msgstr ""
 
@@ -128,14 +128,18 @@ msgid "about"
 msgstr ""
 
 #: app/dev/templates/menu.html:26
+msgid "portfolio"
+msgstr ""
+
+#: app/dev/templates/menu.html:27
 msgid "skills"
 msgstr ""
 
-#: app/dev/templates/menu.html:36
+#: app/dev/templates/menu.html:37
 msgid "domains"
 msgstr ""
 
-#: app/dev/templates/main.html:13
+#: app/dev/templates/main.html:44
 msgid "show domains"
 msgstr ""
 

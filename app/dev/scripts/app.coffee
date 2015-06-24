@@ -3,12 +3,13 @@ require("backbone.routefilter")
 Helper = require("./utils/helper.coffee")
 
 # require views & models
-MenuView = require("./views/menu.coffee")
-FooterView = require("./views/footer.coffee")
-ContentView = require("./views/content.coffee")
-SkillsView = require("./views/skills.coffee")
-DomainsView = require("./views/domains.coffee")
 ContactView = require("./views/contact.coffee")
+ContentView = require("./views/content.coffee")
+DomainsView = require("./views/domains.coffee")
+FooterView = require("./views/footer.coffee")
+MenuView = require("./views/menu.coffee")
+PortfolioView = require("./views/portfolio.coffee")
+SkillsView = require("./views/skills.coffee")
 
 # export a singleton of the ProfileModel
 ProfileModel = require("./models/profile.coffee")
@@ -24,6 +25,7 @@ class AppRouter extends Backbone.Router
 	routes :
 		"" : "index"
 		"profile" : "profile"
+		"portfolio" : "portfolio"
 		"skills" : "skills"
 		"experiences" : "experiences"
 		"contact(/:domain)" : "contact"
@@ -35,7 +37,6 @@ class AppRouter extends Backbone.Router
 	initialize: () ->
 		ProfileModel.fetch
 			success: (model, response, options) =>
-				console.log model
 				MenuView.show()
 				FooterView.show()
 				Backbone.history.start()
@@ -51,6 +52,8 @@ class AppRouter extends Backbone.Router
 		ContentView.show("legal_notice.html")
 	content: () ->
 		ContentView.show("404.html")
+	portfolio: () ->
+		PortfolioView.show()
 	skills: () ->
 		SkillsView.show()
 	domains: () ->
