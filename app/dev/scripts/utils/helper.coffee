@@ -8,6 +8,8 @@ _ = require("underscore")
 	- show alert messages in the contact form
 	- get site to display the logo in menu
 	- handle routing - set active element in menu
+	- enable google analytics tracking
+	- scroll to top button handling
 	exports singleton
 ###
 class Helper
@@ -40,7 +42,8 @@ class Helper
 		element.parent().addClass("active")
 		if element.closest("ul").hasClass("dropdown")
 			element.closest("li.has-dropdown").addClass("active")
-
+	
+	# enable google analytics tracking
 	track_ga: () ->
 		try
 			ga('send', 'pageview', 
@@ -48,4 +51,17 @@ class Helper
 			)
 		catch error
 			console.log "google analytics script failed - " + error
+
+	# scroll to top button handling
+	scroll_top : () ->
+		$(window).scroll () ->
+			if $(this).scrollTop() > 100
+				$("#scroll_top").fadeIn()
+			else 
+				$("#scroll_top").fadeOut()
+
+		$("#scroll_top").on "click", (event) ->			
+			event.preventDefault()
+			$("body, html").animate(scrollTop : 0, 800)
+
 module.exports = new Helper()

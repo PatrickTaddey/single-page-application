@@ -40,6 +40,8 @@ class AppRouter extends Backbone.Router
 				MenuView.show()
 				FooterView.show()
 				Backbone.history.start()
+				Helper.scroll_top()
+
 	# handle routing - set active element in menu
 	before: (route, params) ->
 		Helper.handle_routing(route, params)
